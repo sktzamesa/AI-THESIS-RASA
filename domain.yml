@@ -1,0 +1,501 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - hiv_definition
+  - hiv_vs_aids_difference
+  - hiv_transmission
+  - hiv_not_transmitted
+  - hiv_symptoms
+  - hiv_treatment
+  - hiv_transmission_fallback_question
+  - hiv_prevention
+  - hiv_cure
+  - hiv_progression
+  - hiv_post_exposure_info
+  - hiv_post_exposure_action
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_hiv_definition:
+    - text: >
+        **HIV stands for Human Immunodeficiency Virus.**
+
+        It’s a virus that attacks the body’s immune system—specifically the CD4 cells (T cells), which help fight infections.
+
+        **What HIV does**
+
+        • HIV weakens your immune system over time 
+
+        • If untreated, it can lead to AIDS (Acquired Immunodeficiency Syndrome), the most advanced stage of HIV infection 
+
+        • At that stage, the body has a very hard time fighting off infections and diseases
+
+  utter_hiv_vs_aids_difference:
+    - text: >
+        **The difference between HIV and AIDS is mainly about what they are and how advanced the condition is.**
+
+        **HIV (Human Immunodeficiency Virus)**
+
+        • The virus itself  
+
+        • Attacks the immune system (CD4 cells)  
+
+        • A person can live with HIV for many years  
+
+        • May not show obvious symptoms  
+
+        • Can be managed with proper treatment  
+
+        **AIDS (Acquired Immunodeficiency Syndrome)**
+
+        • Not a separate virus  
+
+        • The most advanced stage of HIV infection  
+
+        • Occurs when the immune system is severely damaged  
+
+        • The body becomes vulnerable to serious infections and illnesses  
+
+        **In simple terms:**
+
+        • HIV is the cause (the virus)  
+
+        • AIDS is the result (the late stage of untreated HIV) 
+
+        **Important:**
+
+        • With modern treatment, many people with HIV never develop AIDS at all
+
+  utter_hiv_transmission:
+    - text: >
+        **How HIV spreads**
+
+        HIV is transmitted when infected body fluids (blood, semen, vaginal or rectal fluids, or breast milk) enter another person’s body—usually through sex, needles, or from mother to child.
+
+        **The main ways people get HIV**
+
+        • Unprotected sex (vaginal or anal) with someone who has HIV  
+
+        • Sharing needles or syringes  
+
+        • Mother-to-child transmission (during pregnancy, birth, or breastfeeding)  
+
+        • Rare cases: unsafe blood transfusions  
+
+        **Key idea**
+
+        • HIV needs a direct path into the body (like through mucous membranes or the bloodstream)  
+
+        • It doesn’t just spread casually  
+
+        **What does NOT spread HIV**
+
+        • Hugging, kissing, or touching
+
+        • Sharing food or drinks  
+
+        • Air (coughing or sneezing)  
+        
+        • Insect bites  
+
+  utter_hiv_not_transmitted:
+    - text: >
+        **HIV is NOT spread that way.**
+
+        **Why not?**
+
+        • HIV does not survive well outside the human body  
+
+        • It is not present in enough amounts in saliva, sweat, or tears to infect someone  
+
+        • It cannot travel through air or insects  
+
+        **Key idea to remember**
+
+        • HIV only spreads through specific body fluids entering the body (like during sex, blood exposure, or from mother to child)
+
+        • It is not spread through everyday contact  
+
+  utter_clarify_hiv_question:
+    - text: >
+        I can help with that 
+
+        Do you mean:
+
+        • How HIV spreads?
+
+        • Whether a specific situation can cause HIV?
+
+        • General information about HIV?
+
+        • Services offered by the clinic for HIV?
+
+        • HIV symptoms or stages?
+
+        • HIV testing and how it works?
+
+        • HIV treatment or if it can be cured?
+
+        • Ways to prevent HIV?
+
+        • What does NOT spread HIV?
+
+        Please tell me more so I can give you the right answer.
+        
+  utter_hiv_symptoms:
+    - text: >
+        **HIV symptoms and stages**
+
+        **Early stage (first 2–4 weeks after infection)**
+
+        • Some people feel like they have the flu (acute HIV infection)  
+
+        **Common early signs:**
+
+        • Fever  
+
+        • Sore throat  
+
+        • Rash  
+
+        • Swollen lymph nodes 
+
+        • Headache  
+
+        • Fatigue  
+
+        • Some people have no symptoms at all  
+
+        ** Middle stage (chronic HIV)**
+
+        • HIV can go “quiet” for years  
+
+        • You may feel completely normal  
+
+        • The virus is still active and slowly damaging the immune system  
+
+        • This stage can last many years, especially with treatment  
+
+        **Advanced stage (AIDS)**
+
+        • Occurs if HIV is not treated  
+
+        **Symptoms may include:**
+
+        • Rapid weight loss  
+
+        • Persistent fever or night sweats  
+
+        • Extreme tiredness  
+
+        • Frequent infections (e.g., pneumonia)  
+
+        • Chronic diarrhea  
+
+        ** How long before symptoms appear?**
+
+        • Early symptoms: 2–4 weeks after exposure (if they appear) 
+         
+        • No symptoms: possible for years  
+
+        • Advanced symptoms: develop late if untreated  
+
+        **How do you know if you have HIV?**
+
+        • You cannot rely on symptoms alone  
+
+        • The only way to be sure is to get tested  
+
+        **Simple takeaway**
+
+        • Some people feel sick early, others don’t  
+
+        • Many people feel normal for a long time  
+
+        • Testing is the only reliable way to know 
+
+  utter_hiv_progression:
+    - text: >
+        **When does HIV become AIDS?**
+
+        • HIV progresses to AIDS only when the immune system is severely damaged  
+
+        • Doctors diagnose AIDS when:  
+
+        • CD4 cell count drops very low (below 200), or  
+
+        • Certain serious infections or cancers develop (called opportunistic infections)  
+
+        **Can someone have HIV without AIDS?**
+
+        • Yes — and most people do  
+
+        • A person can live with HIV for many years without developing AIDS, especially if they take treatment  
+        
+        • With proper care, many people never reach the AIDS stage  
+
+        **Does HIV always lead to AIDS?**
+
+        • No  
+
+        • Without treatment, HIV can gradually damage the immune system and may lead to AIDS 
+
+        • With treatment (ART), progression can be stopped  
+
+        **Can HIV turn into AIDS?**
+
+        • Yes, but only if it is untreated or not well controlled  
+
+        • HIV is the early stage  
+
+        • AIDS is the advanced stage  
+
+        **How long before HIV becomes AIDS?**
+
+        • It depends on treatment:  
+
+        • Without treatment: Usually about 8–10 years (can be faster or slower)  
+
+        • With treatment (ART): It may never happen at all  
+
+        **Bottom line:**
+
+        • HIV does not automatically become AIDS  
+
+        • AIDS is preventable with proper treatment  
+
+        • Early testing and consistent medication are key  
+
+
+  utter_hiv_cure:
+    - text: >
+        **No — HIV cannot currently be cured.**
+        • But it can be very effectively treated and controlled  
+
+        **What happens with HIV?**
+        • HIV attacks the immune system  
+
+        • Once it enters the body, it integrates into certain cells, which is why it’s extremely difficult to completely eliminate  
+
+        **Can medicine remove HIV from the body?**
+
+        • Current medications (called antiretroviral therapy, or ART) do NOT remove HIV completely  
+
+        • However, they can reduce the virus to undetectable levels in the blood  
+
+        **Will HIV ever be cured?**
+
+        • Researchers are actively working on:  
+
+        • Gene therapies  
+
+        • Vaccines  
+
+        • Strategies to eliminate hidden virus reservoirs  
+
+        • There’s real progress, but no widely available cure yet  
+
+        **Bottom line:**
+
+        • HIV is not curable right now  
+
+        • It does not go away on its own  
+
+        • It is generally considered a lifelong condition  
+
+        • But it is highly manageable with treatment  
+
+
+
+  utter_hiv_treatment:
+    - text: >
+        **The standard treatment is called**
+
+        •Antiretroviral Therapy (ART)  
+
+        • This involves taking a combination of medications every day  
+
+        **How does ART work?**
+
+        • ART doesn’t kill the virus completely, but it:  
+
+        • Stops HIV from multiplying  
+
+        • Reduces the amount of virus in the body (viral load)  
+
+        • Protects the immune system  
+
+        **What medications are used?**
+
+        • HIV treatment usually includes a mix of drug classes, such as:  
+
+        • NRTIs (nucleoside reverse transcriptase inhibitors)  
+
+        • NNRTIs  
+
+        • Integrase inhibitors (very commonly used today)  
+        
+        • Protease inhibitors  
+
+        • Most people now take just 1 pill a day that combines several drugs  
+
+        **Can HIV be controlled?**
+
+        • Yes — with consistent treatment:  
+
+        • Viral load can become undetectable  
+
+        • The immune system stays strong  
+
+        • People can live normal life spans  
+
+        **Do HIV patients take medication long-term?**
+
+        • Yes, ART is typically lifelong  
+
+        • Stopping treatment can allow the virus to come back  
+
+        **Is treatment available?**
+
+        • Yes — HIV treatment is widely available, including in the Philippines:  
+
+        • Government programs and clinics provide free or affordable ART  
+
+        • Testing and counseling services are also accessible  
+
+        **Bottom line:**
+
+        • HIV is treatable  
+
+        • Medication can control it very effectively  
+
+        • People with HIV can live healthy, long lives  
+
+        • Treatment must be taken consistently  
+
+
+  utter_hiv_prevention:
+  - text: >
+        **How to prevent HIV**
+
+        **Safe sex practices**
+
+        • Use condoms consistently and correctly during vaginal, anal, or oral sex 
+
+        • Condoms are highly effective in reducing the risk of HIV  
+
+        **Pre-exposure prevention medicine**
+
+        • PrEP (Pre-Exposure Prophylaxis) is a daily pill for people at higher risk  
+
+        • Taken correctly, it can greatly reduce the chance of getting HIV  
+
+        **Avoid sharing needles**
+
+        • Never share needles, syringes, or other injecting equipment, whether for drugs, tattoos, or piercings  
+
+        **Regular testing and knowing status**
+
+        • Know your HIV status and your partner’s  
+
+        • Early detection and treatment help prevent transmission  
+
+        **Treatment as prevention**
+
+        • People living with HIV on ART (antiretroviral therapy) who maintain an undetectable viral load cannot transmit HIV sexually  
+
+        • This principle is called U=U (Undetectable = Untransmittable)  
+
+        **Mother-to-child prevention**
+
+        • Pregnant people with HIV can take ART to prevent passing HIV to their baby  
+
+        • Safe delivery and breastfeeding alternatives also help reduce risk  
+
+        **Other precautions**
+
+        • Avoid direct contact with infected blood  
+
+        • Ensure blood transfusions and organ donations are screened (rarely a risk today)  
+
+        **Key takeaway**
+
+        • HIV is preventable  
+
+        • Using condoms, taking PrEP, avoiding shared needles, testing regularly, and ensuring proper treatment can dramatically reduce the risk of infection  
+
+
+  utter_post_exposure_info:
+    - text: >
+        **Post-Exposure Prophylaxis (PEP) is an emergency treatment that can help prevent HIV after possible exposure.**
+
+        • 👉 It’s used when someone may have been exposed through:  
+
+        • Unprotected sex  
+
+        • Needle sharing  
+
+        • Sexual assault  
+
+        • Occupational exposure (e.g., healthcare workers)  
+
+        **⏱️ When should PEP be taken?**
+
+        • As soon as possible  
+
+        • Must be started within 72 hours (3 days) after exposure  
+
+        • The earlier, the better — ideally within 24 hours  
+
+        **💊 How does PEP work?**
+
+        • PEP uses a short course of HIV medicines (similar to treatment drugs) to:  
+
+        • Stop the virus from establishing infection in the body  
+
+        • Block HIV from multiplying early on  
+
+        • 👉 You take the medication daily for 28 days  
+
+        **❓ Can HIV be prevented after exposure?**
+
+        • 👉 Yes — if PEP is started quickly and taken correctly  
+
+        • It can significantly reduce the risk of infection  
+
+        • It is not 100% guaranteed, but highly effective when used properly  
+
+        **💉 What medicine is used?**
+
+        • PEP usually includes a combination of antiretroviral drugs, often in a single daily pill or a small number of pills  
+
+  utter_post_exposure_action:
+    - text: >
+        Go to our services page and we offer PEP service
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

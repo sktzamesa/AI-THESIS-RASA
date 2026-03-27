@@ -1,0 +1,276 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# -------------------------
+# HIV DEFINITION
+# -------------------------
+- intent: hiv_definition
+  examples: |
+    - What is HIV?
+    - Can you explain HIV?
+    - Define HIV
+    - What does HIV mean?
+    - What is the meaning of HIV?
+    - Tell me about HIV
+    - What kind of disease is HIV?
+    - What happens if someone has HIV?
+    - What is HIV infection?
+    - I want to know what HIV is
+    - Can you describe HIV in simple terms?
+    - What is HIV virus?
+    - What does HIV do to the body?
+    - Explain HIV like I’m a beginner
+    - What is human immunodeficiency virus?
+  
+
+# HIV VS AID CONCEPT
+
+
+- intent: hiv_vs_aids_difference
+  examples: |
+    - What is the difference between HIV and AIDS?
+    - Are HIV and AIDS the same thing?
+    - How is HIV different from AIDS?
+    - Explain HIV vs AIDS
+    - What separates HIV from AIDS?
+    - Is HIV equal to AIDS?
+    - What’s the distinction between HIV and AIDS?
+    - How do HIV and AIDS relate to each other?
+    - Difference of HIV and AIDS
+    - Compare HIV and AIDS
+    - Are they the same disease or different?
+    - What makes AIDS different from HIV?
+   
+- intent: hiv_progression
+  examples: |
+    - When does HIV become AIDS?
+    - Can someone have HIV without AIDS?
+    - Does HIV always lead to AIDS?
+    - Can HIV turn into AIDS?
+    - How long before HIV becomes AIDS?
+# TRANSMISSION
+
+- intent: hiv_transmission
+  examples: |
+    - How is HIV transmitted?
+    - How does HIV spread?
+    - How do people get HIV?
+    - What are the ways HIV spreads?
+    - How is HIV transferred?
+    - Can HIV spread through needles?
+    - Can HIV be transferred?
+    - How does HIV transfer from one person to another?
+    - Can HIV transfer through sex?
+    - Can HIV transfer through blood?
+    - Is HIV transferable?
+    - Can I get HIV from someone?
+    - Can I get infected from someone with HIV?
+    - Can I get HIV if someone has HIV?
+    - Can HIV spread from person to person?
+    - Can I get HIV from an infected person?
+
+- intent: hiv_not_transmitted
+  examples: |
+    - Can HIV spread through kissing?
+    - Can HIV spread through saliva?
+    - Can HIV spread through sweat?
+    - Can HIV spread through food sharing?
+    - Can HIV spread through mosquito bites?
+    - Can HIV spread through toilet seats?
+    - Is HIV airborne?
+    - Does HIV spread through casual or contact?
+    - Can HIV spread through hugging?
+
+#HIV TRANSMISSION FALLBACK QUESTION FOR LOW CONTEXT QUESTIONS
+- intent: hiv_transmission_fallback_question
+  examples: |
+    - Can I get HIV
+    - Can you get HIV
+    - Is it possible to get HIV
+    - Can someone get HIV
+
+# SYMPTOMS
+
+- intent: hiv_symptoms
+  examples: |
+    - What are the symptoms of HIV?
+    - How do I know if I have HIV?
+    - What are early signs of HIV?
+    - What does HIV feel like?
+    - What happens to your body if you have HIV?
+    - What are the stages of HIV symptoms?
+    - How long before symptoms appear?
+    - What are common HIV signs?
+    - Do people with HIV feel sick?
+
+
+- intent: hiv_cure
+  examples: |
+    - Can HIV be cured?
+    - Is HIV curable?
+    - Is there a cure for HIV?
+    - Can HIV go away completely?
+    - Can doctors cure HIV?
+    - Is HIV permanent?
+    - Can medicine remove HIV from the body?
+    - Will HIV ever be cured?
+    - Is there a permanent cure for HIV?
+    - Can HIV disappear?
+    - Is HIV a lifelong disease?
+    - Does HIV stay forever?
+    - Can HIV be eliminated from the body?
+
+- intent: hiv_treatment
+  examples: |
+    - Can HIV be treated?
+    - How is HIV treated?
+    - What treatment is used for HIV?
+    - What is ART in HIV?
+    - Can HIV be controlled?
+    - Is HIV treatable?
+    - What medication is used for HIV?
+    - What medications treat HIV?
+    - Are there medications for HIV?
+    - Can medication control HIV?
+    - Does HIV have treatment?
+    - Do HIV patients take medication?
+    - Can I get treated if I have HIV?
+    - Is there treatment available for HIV?
+
+- intent: hiv_prevention
+  examples: |
+    - How can HIV be prevented?
+    - How do I avoid getting HIV?
+    - What are ways to prevent HIV?
+    - How to stay safe from HIV?
+    - What protection works against HIV?
+    - Can condoms prevent HIV?
+    - How effective is protection against HIV?
+    - What are HIV prevention methods?
+    - How to reduce risk of HIV?
+    - How can I protect myself from HIV?
+    - What can I do to avoid HIV?
+    - How to stop HIV infection?
+    - How do you prevent HIV transmission?
+    - What are safe practices to avoid HIV?
+    - Can I avoid HIV infection?
+    - What helps prevent HIV?
+    - How do condoms help prevent HIV?
+    - Is HIV preventable?
+    - How to be safe from HIV during sex?
+    - What precautions should I take against HIV?
+
+- intent: hiv_post_exposure_info
+  examples: |
+    - What is PEP for HIV?
+    - Is there emergency treatment after HIV exposure?
+    - How does PEP work?
+    - Can HIV be prevented after exposure?
+    - What medicine is used after HIV exposure?
+    - How effective is PEP?
+    - Can HIV be stopped after exposure?
+    - What is post exposure prophylaxis?
+    - How does emergency HIV treatment work?
+    - Is there a way to prevent HIV after risky contact?
+  
+- intent: hiv_post_exposure_action
+  examples: |
+    - What should I do after possible HIV exposure?
+    - I think I was exposed to HIV, what now?
+    - What are the steps after risky contact?
+    - What should I do within 72 hours of exposure?
+    - Where can I go after HIV exposure?
+    - Can I get help after possible exposure?
+    - What should I do if I had unprotected sex?
+    - I might have been exposed to HIV, what should I do?
+    - What actions should I take after exposure?
+    - Where should I seek help after exposure?

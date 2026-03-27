@@ -1,0 +1,90 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: hiv definition question
+  steps:
+  - intent: hiv_definition
+  - action: utter_hiv_definition
+
+- story: hiv vs aids definition
+  steps:
+  - intent: hiv_vs_aids_difference
+  - action: utter_hiv_vs_aids_difference
+
+- story: hiv transmission question
+  steps:
+  - intent: hiv_transmission
+  - action: utter_hiv_transmission
+
+- story: hiv not transmitted question
+  steps:
+  - intent: hiv_not_transmitted
+  - action: utter_hiv_not_transmitted
+
+- story: hiv clarification question
+  steps:
+  - intent: hiv_transmission_fallback_question
+  - action: utter_clarify_hiv_question
+
+- story: hiv symptoms question
+  steps:
+  - intent: hiv_symptoms
+  - action: utter_hiv_symptoms
+
+- story: hiv cure question
+  steps: 
+  - intent: hiv_cure
+  - action: utter_hiv_cure
+
+- story: hiv treatment question
+  steps:
+  - intent: hiv_treatment
+  - action: utter_hiv_treatment
+
+- story: hiv prevention question
+  steps:
+  - intent: hiv_prevention
+  - action: utter_hiv_prevention
+
+- story: hiv progression question
+  steps:
+  - intent: hiv_progression
+  - action: utter_hiv_progression
+
+- story: hiv exposure info question
+  steps: 
+  - intent: hiv_post_exposure_info
+  - action: utter_post_exposure_info
+
+- story: hiv exposure action question
+  steps: 
+  - intent: hiv_post_exposure_action
+  - action: utter_post_exposure_action
